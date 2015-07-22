@@ -17,7 +17,5 @@ int main()
     carrots = carrots - 1;  // modify the variable
     cout << "Crunch, crunch. Now I have " << carrots << " carrots." << endl;
 
-	
-    cin.get();
 	return 0;
 }

@@ -1,2 +1,2 @@
 # FEProgramming2
-Programming Course for FE
+Programming Course for KAIST MFE

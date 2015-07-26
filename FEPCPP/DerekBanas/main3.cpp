@@ -17,13 +17,11 @@ public:
 class Cat : public Animal{
 public:
 	void makeSound(){ cout << "The Cat says meow" << endl; }
-
 };
 
 class Dog : public Animal{
 public:
 	void makeSound(){ cout << "The Dog says woof" << endl; }
-
 };
 
 // An abstract data type is a class that acts as the base to other classes
@@ -42,7 +40,6 @@ public:
 	int getNumDoors() { return 4; }
 	StationWagon() { }
 	~StationWagon();
-
 };
 
 int main(){
@@ -57,6 +54,10 @@ int main(){
 	Car* stationWagon = new StationWagon();
 
 	cout << stationWagon->getNumWheels() << endl;
+
+	delete pCat;
+	delete pDog;
+	delete stationWagon;
 
 	return 0;
 }

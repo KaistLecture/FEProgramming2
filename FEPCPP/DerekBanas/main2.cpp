@@ -11,7 +11,7 @@ public:
 
 	// When we define a method as virtual we know that Animal
 	// will be a base class that may have this method overwritten
-	virtual void getClass() { cout << "I'm an Animal" << endl; }
+	void getClass() { cout << "I'm an Animal" << endl; }
 };
 
 class Dog : public Animal{

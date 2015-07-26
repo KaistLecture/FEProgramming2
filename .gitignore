@@ -24,4 +24,5 @@
 *.ipch
 *.pyd
 
-FEPCPP/Chapter*/Debug/
+FEPCPP/*/Debug/
+FEPCPP/*/Release

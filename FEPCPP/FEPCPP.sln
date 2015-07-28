@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter1", "Chapter1\Chapter1.vcxproj", "{6B48513E-6706-4154-8E79-6C26E8DF309B}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DerekBanas", "DerekBanas\DerekBanas.vcxproj", "{2F934A31-C0BB-4D6F-ADA6-98C85CD3B345}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP_Basic_DerekBanas", "DerekBanas\DerekBanas.vcxproj", "{2F934A31-C0BB-4D6F-ADA6-98C85CD3B345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B48513E-6706-4154-8E79-6C26E8DF309B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{6B48513E-6706-4154-8E79-6C26E8DF309B}.Debug|Win32.Build.0 = Debug|Win32
-		{6B48513E-6706-4154-8E79-6C26E8DF309B}.Release|Win32.ActiveCfg = Release|Win32
-		{6B48513E-6706-4154-8E79-6C26E8DF309B}.Release|Win32.Build.0 = Release|Win32
 		{2F934A31-C0BB-4D6F-ADA6-98C85CD3B345}.Debug|Win32.ActiveCfg = Debug|Win32
 		{2F934A31-C0BB-4D6F-ADA6-98C85CD3B345}.Debug|Win32.Build.0 = Debug|Win32
 		{2F934A31-C0BB-4D6F-ADA6-98C85CD3B345}.Release|Win32.ActiveCfg = Release|Win32

@@ -23,6 +23,7 @@
 *.opensdf
 *.ipch
 *.pyd
+*.txt
 
 FEPCPP/Debug/
 FEPCPP/Release/

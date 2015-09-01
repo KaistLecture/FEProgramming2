@@ -7,6 +7,8 @@
 #include <iostream>
 // Allows us to use vectors
 #include <vector>
+#include <algorithm>
+#include <valarray>
 // Allows us to use strings
 #include <string>
 
@@ -14,10 +16,14 @@
 // std::cout becomes cout
 using namespace std;
 
+void showVector(int n) {
+	std::cout << n << "\t";
+}
+
 // This is where execution begins. Attributes can be sent to main
 int main() {
 
-#define _chapter5_
+#define _chapter1_
 
 #ifdef _chapter1_
 
@@ -26,7 +32,7 @@ int main() {
 	// Statements must end with a semicolon
 	// Strings must be surrounded by "
 	// << sends the text via standard output to the screen
-	cout << "Hello Internet" << endl;
+	cout << "Hello World" << endl;
 
 	// ---------- VARIABLES / DATA TYPES ----------
 	// Variables start with a letter and can contain letters, numbers and _
@@ -51,26 +57,22 @@ int main() {
 	// doubles are floating point numbers accurate to about 15 digits
 	double otherFavNum = 1.6180339887;
 
+	auto autoVar1 = 'c';
+	auto autoVar2 = 1.23;
+
 	// You can output a variable value like this
 	cout << "Favorite Number " << favNum << endl;
 
-	// Other types include
-	// short int : At least 16 bits
-	// long int : At least 32 bits
-	// long long int : At least 64 bits
-	// unsigned int : Same size as signed version
-	// long double : Not less then double
-
 	// You can get the number of bytes for a data type with sizeof
-
 	cout << "Size of int " << sizeof(myAge) << endl;
 	cout << "Size of char " << sizeof(myGrade) << endl;
 	cout << "Size of bool " << sizeof(isHappy) << endl;
 	cout << "Size of float " << sizeof(favNum) << endl;
 	cout << "Size of double " << sizeof(otherFavNum) << endl;
+	cout << "Size of auto1 " << sizeof(autoVar1) << endl;
+	cout << "Size of auto2 " << sizeof(autoVar2) << endl;
 
 	int largestInt = 2147483647;
-
 	cout << "Largest int " << largestInt << endl;
 	cout << largestInt + 1 << endl;
 
@@ -81,6 +83,7 @@ int main() {
 	cout << "5 - 2 = " << 5 - 2 << endl;
 	cout << "5 * 2 = " << 5 * 2 << endl;
 	cout << "5 / 2 = " << 5 / 2 << endl;
+	cout << "5 / 2.0 = " << 5 / 2.0 << endl;
 	cout << "5 % 2 = " << 5 % 2 << endl;
 
 	int five = 5;
@@ -289,7 +292,7 @@ getline(cin, yourName);
 
 cout << "Hello " << yourName << endl;
 
-double eulersConstant = .57721;
+double eulersConstant = .57;
 string eulerGuess;
 double eulerGuessDouble;
 cout << "What is Euler's Constant? ";
@@ -342,7 +345,7 @@ int lastNameIndex = yourName.find("Banas", 0);
 cout << "Index for last name " << lastNameIndex << endl;
 
 // insert places a string in the index defined
-yourName.insert(5, " Justin");
+yourName.insert(0, "Justin ");
 cout << yourName << endl;
 
 // erase will delete 6 characters starting at index 7
@@ -350,7 +353,7 @@ yourName.erase(6, 7);
 cout << yourName << endl;
 
 // replace 5 characters starting at index 6 with the string Maximus
-yourName.replace(6, 5, "Maximus");
+yourName.replace(6, 1, "Maximus");
 cout << yourName << endl;
 
 #endif
@@ -360,39 +363,68 @@ cout << yourName << endl;
 // ---------- VECTORS ----------
 // Vectors are like arrays, but their size can change
 
-vector <int> lotteryNumVect(10);
 
 int lotteryNumArray[5] = { 4, 13, 14, 24, 34 };
+vector <int> lotteryNumVect(lotteryNumArray, lotteryNumArray+5);
+cout << "Size of vector = " << lotteryNumVect.size() << endl;
+for_each(lotteryNumVect.begin(), lotteryNumVect.end(), showVector);
+cout << endl;
 
 // Add the array to the vector starting at the beginning of the vector
 lotteryNumVect.insert(lotteryNumVect.begin(), lotteryNumArray, lotteryNumArray + 3);
+cout << "Size of vector = " << lotteryNumVect.size() << endl;
+for_each(lotteryNumVect.begin(), lotteryNumVect.end(), showVector);
+cout << endl;
 
 // Insert a value into the 5th index
 lotteryNumVect.insert(lotteryNumVect.begin() + 5, 44);
-
-// at gets the value in the specified index
-cout << "Value in 5 " << lotteryNumVect.at(5) << endl;
+for_each(lotteryNumVect.begin(), lotteryNumVect.end(), showVector);
+cout << endl;
 
 // push_back adds a value at the end of a vector
 lotteryNumVect.push_back(64);
 
 // back gets the value in the final index
-cout << "Final Value " << lotteryNumVect.back() << endl;
+cout << "Final Value = " << lotteryNumVect.back() << endl;
+for_each(lotteryNumVect.begin(), lotteryNumVect.end(), showVector);
+cout << endl;
 
 // pop_back removes the final element
 lotteryNumVect.pop_back();
 
 // front returns the first element
-cout << "First Element " << lotteryNumVect.front() << endl;
+cout << "First Element = " << lotteryNumVect.front() << endl;
 
 // back returns the last element
-cout << "Last Element " << lotteryNumVect.back() << endl;
+cout << "Last Element = " << lotteryNumVect.back() << endl;
 
 // empty tells you if the vector is empty
-cout << "Vector Empty " << lotteryNumVect.empty() << endl;
+cout << "Vector Empty = " << lotteryNumVect.empty() << endl;
+lotteryNumVect.resize(0);
+cout << "Vector Empty = " << lotteryNumVect.empty() << endl;
 
-// size returns the total number of elements
-cout << "Number of Vector Elements " << lotteryNumVect.size() << endl;
+//valarray
+double gpa[5] = { 3.1, 3.5, 3.8, 2.9, 3.3 };
+valarray<double> v1; // an array of int, size 0
+valarray<int> v2(8); // an array of 8 int elements
+valarray<int> v3(10, 8); // an array of 8 int elements, // each set to 10
+valarray<double> v4(gpa, 4); // an array of 4 elements  // initialized to the first 4 elements of gpa
+for (int i = 0; i < v4.size(); ++i)
+	cout << v4[i] << "\t";
+cout << endl;
+
+valarray<double> v5 = v4 * 2.;
+valarray<double> v6 = v4 + v5;
+valarray<double> v7 = v4.apply(exp);
+for (int i = 0; i < v7.size(); ++i)
+	cout << v7[i] << "\t";
+cout << endl;
+
+
+cout << "Max = " << v7.max() << endl;
+cout << "Min = " << v7.min() << endl;
+cout << "Sum = " << v7.sum() << endl;
+
 
 #endif
 
@@ -401,7 +433,7 @@ cout << "Number of Vector Elements " << lotteryNumVect.size() << endl;
 // ---------- EXCEPTION HANDLING ----------
 // You can be prepared for potential problems with exception handling
 
-int number = 0;
+int number = 1;
 
 try {
 

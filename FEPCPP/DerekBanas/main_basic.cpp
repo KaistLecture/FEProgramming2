@@ -7,7 +7,7 @@
 #include <iostream>
 // Allows us to use vectors
 #include <vector>
-#include <algorithm>
+#include <algorithm> 
 #include <valarray>
 // Allows us to use strings
 #include <string>
@@ -57,9 +57,6 @@ int main() {
 	// doubles are floating point numbers accurate to about 15 digits
 	double otherFavNum = 1.6180339887;
 
-	auto autoVar1 = 'c';
-	auto autoVar2 = 1.23;
-
 	// You can output a variable value like this
 	cout << "Favorite Number " << favNum << endl;
 
@@ -69,8 +66,7 @@ int main() {
 	cout << "Size of bool " << sizeof(isHappy) << endl;
 	cout << "Size of float " << sizeof(favNum) << endl;
 	cout << "Size of double " << sizeof(otherFavNum) << endl;
-	cout << "Size of auto1 " << sizeof(autoVar1) << endl;
-	cout << "Size of auto2 " << sizeof(autoVar2) << endl;
+
 
 	int largestInt = 2147483647;
 	cout << "Largest int " << largestInt << endl;

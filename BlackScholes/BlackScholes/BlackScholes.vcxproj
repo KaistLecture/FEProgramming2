@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D08580EE-BF94-4BFC-A61F-D071144AAA20}</ProjectGuid>
+    <ProjectGuid>{55A5433F-2846-4C4A-A393-7C48ED7E70C5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>TestCPP</RootNamespace>
+    <RootNamespace>BlackScholes</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="function.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="..\BlackScholesFormulas.h" />
+    <ClInclude Include="..\Normals.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="function.h" />
+    <ClCompile Include="..\BlackScholesFormulas.cpp" />
+    <ClCompile Include="..\Normals.cpp" />
+    <ClCompile Include="..\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

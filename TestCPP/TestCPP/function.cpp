@@ -1,8 +1,10 @@
 #include <iostream>
+#include "function.h"
+
+#define PI 3.14
+#define SQ(x) x*x
 
 void f() {
-	int a = 3;
-	int b = 2.5;
-	std::cout << "function" << std::endl;
-	std::cout << a << "\t" << b << "\n";
+	std::cout << char(65) << std::endl;
+	std::cout << "Hello" << std::endl;
 }

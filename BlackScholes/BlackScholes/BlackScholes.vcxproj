@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BlackScholesFormulas.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Normals.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlackScholesFormulas.h" />
+    <ClInclude Include="Normals.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{55A5433F-2846-4C4A-A393-7C48ED7E70C5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,15 +154,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\BlackScholesFormulas.h" />
-    <ClInclude Include="..\Normals.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\BlackScholesFormulas.cpp" />
-    <ClCompile Include="..\Normals.cpp" />
-    <ClCompile Include="..\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

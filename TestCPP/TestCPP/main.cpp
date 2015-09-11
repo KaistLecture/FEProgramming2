@@ -1,10 +1,28 @@
 #include <iostream>
+#include <string>
 #include "function.h"
-
-
+#include "function2.h"
 
 int main() {
 
+	//try-catch-throw
+	try {
+		f();
+	}
+	catch(std::string e) {
+		std::cout << e << std::endl;
+	}
+
+	std::cout << "-----------------" << std::endl;
+	try {
+		f2();
+	}
+	catch (std::string e) {
+		std::cout << e << std::endl;
+	}
+
+	//Pointer
+	std::cout << "-----------------" << std::endl;
 	int a = 10;
 	int* p = &a;
 	std::cout << p << " " << *p << std::endl;

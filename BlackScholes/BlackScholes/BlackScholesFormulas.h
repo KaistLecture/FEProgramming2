@@ -7,7 +7,15 @@
 #ifndef BLACK_SCHOLES_FORMULAS_H
 #define BLACK_SCHOLES_FORMULAS_H
 
+enum OptionType {Call, Put, DigCall, DigPut};
 
+double BlackScholes(OptionType type,
+	double Spot,
+	double Strike,
+	double r,
+	double d,
+	double Vol,
+	double Expiry);
 
 double BlackScholesCall( double Spot,
                          double Strike,

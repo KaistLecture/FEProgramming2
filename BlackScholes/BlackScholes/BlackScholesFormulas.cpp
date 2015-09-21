@@ -8,10 +8,47 @@
 #include "BlackScholesFormulas.h"
 #include "Normals.h"
 #include <cmath>
+#include <string>
 
 #if !defined(_MSC_VER)
 using namespace std;
 #endif
+
+double BlackScholes(OptionType type,
+	double Spot,
+	double Strike,
+	double r,
+	double d,
+	double Vol,
+	double Expiry) {
+
+	double standardDeviation = Vol*sqrt(Expiry);
+	double moneyness = log(Spot / Strike);
+	double d1 = (moneyness + (r - d)*Expiry + 0.5* standardDeviation*standardDeviation) / standardDeviation;
+	double d2 = d1 - standardDeviation;
+
+	double price;
+	switch (type) {
+	case Call :
+		price = Spot*exp(-d*Expiry) * CumulativeNormal(d1) - Strike*exp(-r*Expiry)*CumulativeNormal(d2);
+		break;
+	case Put :
+		price = Strike*exp(-r*Expiry)*(1.0 - CumulativeNormal(d2)) - Spot*exp(-d*Expiry) * (1 - CumulativeNormal(d1));
+		break;
+	case DigCall :
+		price = exp(-r*Expiry)*CumulativeNormal(d2);
+		break;
+	case DigPut :
+		price = exp(-r*Expiry)*(1.0 - CumulativeNormal(d2));
+		break;
+	default:
+		throw(std::string("error: Option Type not defined"));
+	}
+
+	return price;
+}
+
+
 
 double BlackScholesCall( double Spot,
                          double Strike,

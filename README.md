@@ -14,3 +14,7 @@ Black-Scholes 함수
 reading CSV file
 Tokenize string
 
+## Updated Sep 22
+HW update - structure 변수 변경, 계산식 첨부
+HW 실행파일 - HW1.exe를 실행하면 결과를 확인할 수 있습니다
+(입력 파일이 같은 폴더에 있어야 함)

@@ -6,7 +6,6 @@
 *.so
 .build-stamp
 *.pyc
-*.exe
 *.dll
 *.exp
 *.lib
@@ -29,3 +28,5 @@ FEPCPP/Debug/
 FEPCPP/Release/
 FEPCPP/*/Debug/
 FEPCPP/*/Release
+Debug/
+Release/

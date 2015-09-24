@@ -9,14 +9,14 @@ using namespace std;
 
 int main() {
 
-	ofstream out("output.csv");
-	for (int i = 0; i < 10; ++i) {
-		for (int j = 0; j < 5; ++j) {
-			out << i*j << ",";
-		}
-		out << endl;
-	}
-	out.close();
+	//ofstream out("output.csv");
+	//for (int i = 0; i < 10; ++i) {
+	//	for (int j = 0; j < 5; ++j) {
+	//		out << i*j << ",";
+	//	}
+	//	out << endl;
+	//}
+	//out.close();
 
 	ifstream in("output.csv");
 	string str;

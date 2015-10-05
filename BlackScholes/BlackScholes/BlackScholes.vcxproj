@@ -22,10 +22,12 @@
     <ClCompile Include="BlackScholesFormulas.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Normals.cpp" />
+    <ClCompile Include="option.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackScholesFormulas.h" />
     <ClInclude Include="Normals.h" />
+    <ClInclude Include="option.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{55A5433F-2846-4C4A-A393-7C48ED7E70C5}</ProjectGuid>

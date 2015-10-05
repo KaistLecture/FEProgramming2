@@ -24,6 +24,9 @@
     <ClCompile Include="BlackScholesFormulas.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="option.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Normals.h">
@@ -31,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="BlackScholesFormulas.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="option.h">
+      <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,10 +20,21 @@ void showVector(int n) {
 	std::cout << n << "\t";
 }
 
+int* nullfun() {
+	int q = 30;
+	int* t = new int(30);
+	return t;
+}
+
+
 // This is where execution begins. Attributes can be sent to main
 int main() {
 
-#define _chapter1_
+	int* t = nullfun();
+	std::cout << *t << std::endl;
+	delete t;
+
+#define _chaptez1_
 
 #ifdef _chapter1_
 

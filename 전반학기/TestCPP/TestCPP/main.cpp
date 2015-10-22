@@ -5,6 +5,18 @@
 
 int main() {
 
+	double* pp = new double(10);
+	std::cout << &pp << "\t" << pp << "\t" << *pp << std::endl;
+	
+	double* q = pp;
+	std::cout << &q << "\t" << q << "\t" << *q << std::endl;
+
+	delete q;
+	std::cout << pp << "\t" << *pp << std::endl;
+
+
+
+
 	//try-catch-throw
 	try {
 		f();

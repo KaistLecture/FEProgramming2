@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{57284FC3-7511-4F80-A1C9-88F9AC6188C4}</ProjectGuid>
+    <ProjectGuid>{97C16798-9185-4A8D-8291-5DE3E556D962}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>InterestRate</RootNamespace>
+    <RootNamespace>ArrayClass</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="interest_rate.cpp" />
+    <ClCompile Include="array.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="interest_rate.h" />
+    <ClInclude Include="array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

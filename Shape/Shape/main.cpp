@@ -9,5 +9,7 @@ int main() {
 	double b = r->area();
 	std::cout << "Square = " << a << std::endl;
 	std::cout << "Rect = " << b << std::endl;
+	delete s;
+	delete r;
 	return 0;
 }

@@ -1,17 +1,23 @@
 #pragma once
 
-class Square {
+class Shape {
 protected:
 	double a_;
 public:
-	Square(double a);
-	double area();
+	Shape(double a) : a_(a) {}
+	virtual double area() = 0;
 };
 
-class Rect : public Square {
+class Square : public Shape{
+public:
+	Square(double a);
+	virtual double area();
+};
+
+class Rect : public Shape {
 private:
 	double b_;
 public:
 	Rect(double a, double b);
-	double area(); //오버라이딩
+	virtual double area(); //오버라이딩
 };

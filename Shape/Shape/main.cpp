@@ -3,8 +3,8 @@
 #include "shape.h"
 
 int main() {
-	Square* s = new Square(10);
-	Square* r = new Rect(10, 5);
+	Shape* s = new Square(10);
+	Shape* r = new Rect(10, 5);
 	double a = s->area();
 	double b = r->area();
 	std::cout << "Square = " << a << std::endl;

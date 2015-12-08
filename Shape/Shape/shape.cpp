@@ -1,12 +1,12 @@
 
 #include "shape.h"
 
-Square::Square(double a) : a_(a) {}
+Square::Square(double a) : Shape(a) {}
 double Square::area() {
 	return a_*a_;
 }
 
-Rect::Rect(double a, double b) : Square(a) {
+Rect::Rect(double a, double b) : Shape(a) {
 	b_ = b;
 }
 double Rect::area() {

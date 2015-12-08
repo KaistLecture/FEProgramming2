@@ -14,7 +14,7 @@ private:
 class CCRate {
 public:
 	CCRate(double r) : r_(r) {}
-	double discountFactor(double t);
+	virtual double discountFactor(double t);
 	double forwardRate(double t1, double t2);
 protected:
 	double r_;
@@ -24,7 +24,7 @@ class DCRate : public CCRate {
 public:
 	DCRate(double r, int freq) : CCRate(r), freq_(freq) {}
 	double discountFactor(double t);
-	double forwardRate(double t1, double t2);
+	//double forwardRate(double t1, double t2);
 private:
 	int freq_;
 };

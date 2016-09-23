@@ -5,6 +5,8 @@
 
 int main() {
 
+	//&& ||
+
 	//header file
 	
 	//macro

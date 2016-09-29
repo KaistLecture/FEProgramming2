@@ -23,6 +23,7 @@
 *.ipch
 *.pyd
 *.txt
+*.VC.db
 
 FEPCPP/Debug/
 FEPCPP/Release/

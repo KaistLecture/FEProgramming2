@@ -1,6 +1,6 @@
 #pragma once
 
-#define MAX(x,y) ((x)>(y))?(x):(y)
+#define MAX(x,y) (((x)>(y))?(x):(y))
 
 enum OptionType { Call=1, Put=-1 };
 

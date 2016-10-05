@@ -20,7 +20,7 @@ ResultVector bsprice_vec(std::vector<double>& s,
 int main() {
 	double s = 100, k = 100, r = 0.02, q = 0.01;
 	double t = 91 / 365.0, sigma = 0.2;
-	OptionType type = Call;
+	OptionType type = Put;
 
 	double anal_price = bsprice(s, k, r, q, t, sigma, type);
 	std::cout << "Analytic Price = " << anal_price << std::endl;
@@ -34,7 +34,7 @@ int main() {
 	std::cout << "BNT Price = " << bnt_price << std::endl;
 	
 	std::ofstream fout("option_prices.csv");
-	fout << "S,Analytic,MC,BNT,MC-A,BNT-A\n";
+	fout << "S,Analytic,MC,BNT,MC-A,BNT-A" << std::endl;
 	std::vector<double> ss;
 	for (int i = 0; i <= 40; ++i)
 		ss.push_back(80.0 + i);
@@ -44,6 +44,7 @@ int main() {
 	
 	for (int i = 0; i < res.size(); ++i) {
 		fout << ss[i] << ",";
+		std::cout << ss[i] << ",";
 		for (int j = 0; j < 5; ++j) {
 			std::cout.precision(8);
 			std::cout << res[i][j] << "\t";

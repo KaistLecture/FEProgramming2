@@ -30,14 +30,14 @@ public:
 
 	//get method: 멤버변수는 일반적으로 private 접근권한으로 설정
 	//class 외부에서 멤버변수의 값을 이용하거나 변경할 때, get/set 함수를 이용함
-	double getX() { return x_; }
-	double getY() { return y_; }
-	std::string getColor() { return color_; }
+	double getX() const { return x_; }
+	double getY() const { return y_; }
+	std::string getColor()const { return color_; }
 	//set method
 	void setX(double x) { x_ = x; }
 
 	//넓이 계산 함수
-	double area() { return x_*y_; }
+	double area() const { return x_*y_; }
 
 	//private 영역의 변수와 함수는 클래스 외부에서 직접 접근이 불가함
 private:
@@ -53,8 +53,7 @@ void printRect(Rect& r) { //reference인 경우와 아닌 경우 차이
 int main() {	
 	//function overloading
 	std::cout << add(1, 2) << std::endl;
-	std::cout << add(1, 2, 3) << std::endl;
-	
+	std::cout << add(1, 2, 3) << std::endl;	
 
 	std::cout << "Class" << std::endl;
 
@@ -79,6 +78,21 @@ int main() {
 	printRect(b);
 	printRect(c);
 	printRect(d);
+	
+	//default constructor
+	Rect n;
+	printRect(n);
+
+	//copy constructor
+	Rect e(a);
+	printRect(e);
+	
+	//copy assignment
+	n = a;
+	printRect(n);
+
+	//struct
+
 
 	return 0;
 

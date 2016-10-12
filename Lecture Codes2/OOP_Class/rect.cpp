@@ -23,7 +23,7 @@ Rect& Rect::operator=(const Rect& rhs) {
 }
 
 Rect::~Rect() {
-	std::cout << "--¼Ò¸êÀÚÈ£Ãâ--" << std::endl;
+	std::cout << "--¼Ò¸êÀÚÈ£Ãâ--!!!" << std::endl;
 	std::cout << "x=" << x_ << "\t" << "y=" << y_ << "\t" << "color=" << color_ << "\n\n";
 }
 

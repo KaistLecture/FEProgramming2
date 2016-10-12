@@ -147,9 +147,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main_class.cpp" />
+    <ClCompile Include="main_point.cpp" />
+    <ClCompile Include="point.cpp" />
     <ClCompile Include="rect.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="point.h" />
     <ClInclude Include="rect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

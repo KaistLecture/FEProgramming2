@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <string>
+#include "rect.h"
 
 //function overloading: 함수의 signature 를 다르게 하면 같은 함수 이름으로 다른 함수를 만들수 있음
 double add(double x, double y) {
@@ -10,43 +11,7 @@ double add(double x, double y, double z) {
 	return x * y + z;
 }
 
-//Class
-class Rect {
-	//public 영역의 변수와 함수는 클래스 외부에서 직접 접근이 가능함
-public:
-	//멤버함수, 메소드
-	//생성자
-	Rect() {};
-	Rect(double x, double y, std::string color) :
-		x_(x), y_(y), color_(color) {
-		std::cout << "--생성자호출--" << std::endl;
-		std::cout << "x=" << x_ << "\t" << "y=" << y_ << "\t" << "color=" << color_ << "\n\n";
-	}
-	//소멸자
-	~Rect() { 
-		std::cout << "--소멸자호출--" << std::endl;
-		std::cout << "x=" << x_ << "\t" << "y=" << y_ << "\t" << "color=" << color_ << "\n\n";
-	}
-
-	//get method: 멤버변수는 일반적으로 private 접근권한으로 설정
-	//class 외부에서 멤버변수의 값을 이용하거나 변경할 때, get/set 함수를 이용함
-	double getX() const { return x_; }
-	double getY() const { return y_; }
-	std::string getColor()const { return color_; }
-	//set method
-	void setX(double x) { x_ = x; }
-
-	//넓이 계산 함수
-	double area() const { return x_*y_; }
-
-	//private 영역의 변수와 함수는 클래스 외부에서 직접 접근이 불가함
-private:
-	//멤버변수, 속성,
-	double x_, y_;
-	std::string color_;
-};
-
-void printRect(Rect& r) { //reference인 경우와 아닌 경우 차이
+void printRect(Rect r) { //reference인 경우와 아닌 경우 차이
 	std::cout << "x=" << r.getX() << "\n" << "y=" << r.getY() << "\n" << "color=" << r.getColor() << "\n\n";
 }
 

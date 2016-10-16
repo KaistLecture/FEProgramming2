@@ -14,12 +14,15 @@ public:
 		std::cout << "------------------" << std::endl;
 	}
 };
+
+//Person 클래스에서 상속받은 subclass
 class Student : public Person {
 public:
 	Student(std::string name, int age, int year)
 		: Person(name, age), year(year) {}
-	void print() {
-		Person::print();
+	void print() { 
+		//function override (함수오버라이딩: subclass에서 superclass의 멤버함수를 재정의)
+		Person::print(); //superclass의 함수를 호출
 		std::cout << "year = " << year << std::endl;
 		std::cout << "------------------" << std::endl;
 	}

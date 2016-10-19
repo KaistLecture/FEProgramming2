@@ -30,6 +30,9 @@
     <ClCompile Include="bnt_blackscholes.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="payoff.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="normal.h">
@@ -42,6 +45,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="bnt_blackscholes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="payoff.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

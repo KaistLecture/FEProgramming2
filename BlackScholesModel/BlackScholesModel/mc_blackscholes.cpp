@@ -3,12 +3,11 @@
 #include <random>
 
 double mcprice(double s,
-	double k,
+	Payoff& payoff,
 	double r,
 	double q,
 	double t,
 	double sigma,
-	OptionType type,
 	unsigned int numOfSimulation) {
 
 	double sumOfPayoff = 0;
@@ -22,9 +21,9 @@ double mcprice(double s,
 	for (unsigned int i = 0; i < numOfSimulation; ++i) {
 		double e = engine(gen);
 		for (int j = 0; j < 2; ++j) {
-			double st = es * exp(diffution*(1-j*2)*e);  //antithetic method
-			double payoff = MAX(type*(st - k), 0);
-			sumOfPayoff += df * payoff;
+			double st = es * exp(diffution*(1 - j * 2)*e);  //antithetic method
+			double p = payoff.getPayoff(st);
+			sumOfPayoff += df * p;
 		}
 	}
 	return sumOfPayoff / numOfSimulation / 2.0;

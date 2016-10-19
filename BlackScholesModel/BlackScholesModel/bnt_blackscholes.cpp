@@ -2,12 +2,11 @@
 #include <vector>
 
 double bntprice(double s,
-	double k,
+	Payoff& payoff,
 	double r,
 	double q,
 	double t,
 	double sigma,
-	OptionType type,
 	unsigned int nsteps) {
 	
 	double dt = t / nsteps;
@@ -19,7 +18,7 @@ double bntprice(double s,
 	std::vector<double> v(nsteps + 1, 0.0);
 	for (int j = 0; j <= nsteps; ++j) {
 		double st = s*pow(u, nsteps - j)*pow(d, j);
-		v[j] = MAX(type*(st - k), 0);
+		v[j] = payoff.getPayoff(st);
 	}
 
 	for (int i = nsteps-1; i >= 0; --i) {

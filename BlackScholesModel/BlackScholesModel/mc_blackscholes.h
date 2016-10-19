@@ -1,11 +1,11 @@
 #pragma once
 #include "analytic_blackscholes.h"
+#include "payoff.h" //Payoff 클래스를 이용
 
 double mcprice(double s,
-	double k,
+	Payoff& payoff,
 	double r,
 	double q,
 	double t,
 	double sigma,
-	OptionType type,
 	unsigned int numOfSimulation);

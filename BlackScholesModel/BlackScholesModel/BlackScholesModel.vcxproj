@@ -151,12 +151,14 @@
     <ClCompile Include="main_blackscholes.cpp" />
     <ClCompile Include="mc_blackscholes.cpp" />
     <ClCompile Include="normal.cpp" />
+    <ClCompile Include="payoff.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analytic_blackscholes.h" />
     <ClInclude Include="bnt_blackscholes.h" />
     <ClInclude Include="mc_blackscholes.h" />
     <ClInclude Include="normal.h" />
+    <ClInclude Include="payoff.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

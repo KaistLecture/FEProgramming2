@@ -14,3 +14,12 @@ protected:
 	double strike_;
 	OptionType type_;
 };
+
+class DigitalPayoff : public Payoff {
+public:
+	DigitalPayoff(double strike, OptionType type);
+	virtual double getPayoff(double s);
+protected:
+	double strike_;
+	OptionType type_;
+};

@@ -27,13 +27,19 @@ int main() {
 	std::cout << "Analytic Price = " << anal_price << std::endl;
 
 	PlainVanillaPayoff payoff(k, type);
+	DigitalPayoff payoff1(k, type);
+
 	unsigned int numOfSim = 1000000;
-	double mc_price = mcprice(s, payoff, r, q, t, sigma, numOfSim);
-	std::cout << "MC Price = " << mc_price << std::endl;
+	double pv = mcprice(s, payoff, r, q, t, sigma, numOfSim);
+	double di = mcprice(s, payoff1, r, q, t, sigma, numOfSim);
+	std::cout << "MC pv Price = " << pv << std::endl;
+	std::cout << "MC digital Price = " << di << std::endl;
 	
 	unsigned int nsteps = 300;
-	double bnt_price = bntprice(s, payoff, r, q, t, sigma, nsteps);
-	std::cout << "BNT Price = " << bnt_price << std::endl;
+	double bnt_price_pv= bntprice(s, payoff, r, q, t, sigma, nsteps);
+	double bnt_price_di = bntprice(s, payoff1, r, q, t, sigma, nsteps);
+	std::cout << "BNT pv Price = " << bnt_price_pv << std::endl;
+	std::cout << "BNT digital Price = " << bnt_price_di << std::endl;
 	/*
 	std::ofstream fout("option_prices.csv");
 	fout << "S,Analytic,MC,BNT,MC-A,BNT-A" << std::endl;

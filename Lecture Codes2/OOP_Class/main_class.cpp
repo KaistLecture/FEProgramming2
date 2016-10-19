@@ -15,7 +15,7 @@ void printRect(Rect r) { //reference인 경우와 아닌 경우 차이
 	std::cout << "x=" << r.getX() << "\n" << "y=" << r.getY() << "\n" << "color=" << r.getColor() << "\n\n";
 }
 
-int main_() {	
+int main() {	
 	//function overloading
 	std::cout << add(1, 2) << std::endl;
 	std::cout << add(1, 2, 3) << std::endl;	

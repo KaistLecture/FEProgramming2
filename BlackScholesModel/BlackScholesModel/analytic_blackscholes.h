@@ -1,6 +1,7 @@
 #ifndef _Analytic_BlackScholes_H
 #define _Analytic_BlackScholes_H
 
+#define MAX(x,y) (((x)>(y))?(x):(y))
 enum OptionType { Call = 1, Put = -1 };
 
 double bsprice(double s,

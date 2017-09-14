@@ -48,7 +48,7 @@ double bsImpliedVol(double s,
 		double diff = bsprice(s, k, r, q, t, x, type) - optionPrice;
 		e = abs(diff);
 		x = x - diff / bsvega(s, k, r, q, t, x, type);
-		std::cout << x << std::endl;
+		//std::cout << x << std::endl;
 	}
 	return x;
 }
